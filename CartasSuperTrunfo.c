@@ -5,17 +5,47 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+int main()
+{
+     char estado;
+     char cod_carta[4];
+     char nome_cidade[20];
+     int populacao, n_pontos_turisticos;
+     float area, pib;
 
-    return 0;
+     printf("###### Bem vindos ao jogo SuperTrunfo! ######\n\n");
+     printf("Vamos começar, cadastrando cidades.\n\n");
+
+     printf("Digite o estado: ");
+     scanf("%c", &estado);
+
+     printf("Digite o código da carta: ");
+     scanf("%s", cod_carta);
+
+     printf("Digite o nome da cidade: ");
+     scanf(" %[^\n]s", nome_cidade);
+
+     printf("Digite o total de população: ");
+     scanf("%d", &populacao);
+
+     printf("Digite o tamanha da Área: ");
+     scanf("%f", &area);
+
+     printf("Digite o PIB: ");
+     scanf("%f", &pib);
+
+     printf("Digite o número de pontos turísticos: ");
+     scanf("%d", &n_pontos_turisticos);
+
+     printf("\nA seguinte cidade foi cadastrada:\n");
+     
+     printf("\nEstado: %c\n", estado);
+     printf("Código da carta: %c%s\n", estado, cod_carta);
+     printf("Nome da cidade: %s\n", nome_cidade);
+     printf("População: %d\n", populacao);
+     printf("Área: %.2f km²\n", area);
+     printf("PIB: %.2f bilhões de reais\n", pib);
+     printf("Número de pontos turísticos: %d\n", n_pontos_turisticos);
+
+     return 0;
 }
